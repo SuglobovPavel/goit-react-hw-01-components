@@ -33,7 +33,7 @@ Transactions.prototype = {
    transactions: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
-      amount: PropTypes.number.isRequired,
-      currency: PropTypes.number.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
    })).isRequired,
 }

@@ -4,7 +4,9 @@ import {StatisticsBox, StatisticsTitle, StatisticsBottomBox, StatisticsElement} 
 export const Statistics = ({title, stats}) => {
    return (
       <StatisticsBox>
-         <StatisticsTitle>{title}</StatisticsTitle>
+         {
+            title && (<StatisticsTitle>{title}</StatisticsTitle>)
+         }
          <StatisticsBottomBox>
             {stats.map(el => {
                return <StatisticsElement key={el.id}>                   
@@ -18,7 +20,7 @@ export const Statistics = ({title, stats}) => {
 }
 
 Statistics.prototype = {
-   title: PropTypes.string.isRequired,
+   title: PropTypes.string,
    stats: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
