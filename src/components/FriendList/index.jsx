@@ -14,7 +14,7 @@ export const FriendList = ({friends}) => {
    </FriendListBox>;
 };
 
-FriendList.prototype = {
+FriendList.propTypes  = {
    friends: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
    })).isRequired,
